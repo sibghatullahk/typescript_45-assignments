@@ -75,12 +75,6 @@ console.log('Hello',guest[3].toUpperCase(),',I would like you to attend a party 
 console.log('Hello',guest[4].toUpperCase(),',I would like you to attend a party at my house. Regards!');
 console.log('Hello',guest[5].toUpperCase(),',I would like you to attend a party at my house. Regards!');
 
-//used the charAt to capitalize the first word and then slice to put the rest of the word in place.
-//console.log(`Hello, ${guest[0].charAt(0).toUpperCase() + guest[0].slice(1)}. I would like you to attend a party at my house. Regards!`);
-//console.log(`Hello, ${guest[1].charAt(0).toUpperCase() + guest[1].slice(1)}. I would like you to attend a party at my house. Regards!`);
-console.log(`Hello, ${guest[2].charAt(0).toUpperCase() + guest[2].slice(1)}. I would like you to attend a party at my house. Regards!`);
-
-
 //15 Changing Guest List
 let alertt: string= 'Alert!'
 console.log(alertt)
