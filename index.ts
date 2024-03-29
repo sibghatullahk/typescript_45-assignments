@@ -109,7 +109,7 @@ console.log(guest)
 let news: string= 'Alas We got space only for two guests!';
 console.log(news);
  // saved the shifted/popped guest in a var. Shift removed the first element.
-let popped : string = guest.shift()
+let popped :string = guest.shift()
 console.log('Sorry,', popped.toUpperCase(),'we are out of space.')
  //popped the remaining guests using the pop method.
 console.log('Sorry,', guest.pop(),'we are out of space.')
