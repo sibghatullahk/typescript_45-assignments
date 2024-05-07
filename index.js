@@ -90,13 +90,13 @@ let newalert = 'Hurrah, we got space for three new guests';
 console.log(newalert);
 guest.unshift("bill burr");
 guest.push("makaveli");
+guest.splice(4, 0, 'Wick');
 console.log(guest);
 //17 Pop Guests, we got space for only two guests
 let news = 'Alas We got space only for two guests!';
 console.log(news);
-// saved the shifted/popped guest in a var. Shift removed the first element.
 let popped = guest.shift();
-console.log('Sorry,', popped.toUpperCase(), 'we are out of space.');
+console.log("Sorry, we are out of space.");
 //popped the remaining guests using the pop method.
 console.log('Sorry,', guest.pop(), 'we are out of space.');
 console.log('Sorry,', guest.pop(), 'we are out of space.');
@@ -188,7 +188,7 @@ console.log(x > y);
 console.log(x < y);
 console.log(x >= y);
 console.log(x <= y);
-console.log('\nLine Break');
+console.log('\n');
 const validNum = x > 8 && 8 > y; //and operator, checks for both the values to be true
 console.log(validNum);
 console.log(x > 20 && y == 5);
@@ -211,47 +211,75 @@ if (alienColor == 'Red') {
     console.log();
 }
 //26 More Conditional Statments
-let aliencolor2 = 'Blue ';
-if (aliencolor2 == 'Green') {
-    console.log('You earn 0 points');
+//Version 1: If block
+let alienColor2 = "green";
+if (alienColor2 === "green") {
+    console.log("Player just earned 5 points for shooting the alien.");
 }
 else {
-    console.log("You earn 10 points!");
+    console.log("Player just earned 10 points.");
 }
-let varcolor = 'Yellow';
-if (varcolor == 'Green') {
-    console.log('You earn 0 points');
-}
-else if (varcolor == 'Blue') {
-    console.log('You earn 10 points');
+// Version 2: Else block
+let alienColor3 = "red";
+if (alienColor3 === "green") {
+    console.log("Player just earned 5 points for shooting the alien.");
 }
 else {
-    console.log('You earn 20 points');
+    console.log("Player just earned 10 points.");
 }
-let varcolor1 = 'Blue';
-if (varcolor1 == 'Green') {
-    console.log('You earn 0 points');
+//27 Alien colors #3
+let alienColor4 = "green";
+if (alienColor4 === "green") {
+    console.log("Player just earned 5 points for shooting the green alien.");
 }
-else if (varcolor1 == 'Blue') {
-    console.log('You earn 10 points');
-}
-else {
-    console.log('You earn 20 points');
-}
-let varcolor2 = 'Green';
-if (varcolor2 == 'Green') {
-    console.log('You earn 0 points');
-}
-else if (varcolor2 == 'Blue') {
-    console.log('You earn 10 points');
+else if (alienColor4 === "yellow") {
+    console.log("Player just earned 10 points for shooting the yellow alien.");
 }
 else {
-    console.log('You earn 20 points');
+    console.log("Player just earned 15 points for shooting the red alien.");
 }
-//27
-//28
+let alienColor5 = "yellow";
+if (alienColor5 === "green") {
+    console.log("Player just earned 5 points for shooting the green alien.");
+}
+else if (alienColor5 === "yellow") {
+    console.log("Player just earned 10 points for shooting the yellow alien.");
+}
+else {
+    console.log("Player just earned 15 points for shooting the red alien.");
+}
+let alienColor6 = "red";
+if (alienColor6 === "green") {
+    console.log("Player just earned 5 points for shooting the green alien.");
+}
+else if (alienColor6 === "yellow") {
+    console.log("Player just earned 10 points for shooting the yellow alien.");
+}
+else {
+    console.log("Player just earned 15 points for shooting the red alien.");
+}
+//28 Stages of Life: Write an if-else chain that determines a person’s stage of life
+let age = 25;
+if (age < 2) {
+    console.log("The person is a baby.");
+}
+else if (age >= 2 && age < 4) {
+    console.log("The person is a toddler.");
+}
+else if (age >= 4 && age < 13) {
+    console.log("The person is a kid.");
+}
+else if (age >= 13 && age < 20) {
+    console.log("The person is a teenager.");
+}
+else if (age >= 20 && age < 65) {
+    console.log("The person is an adult.");
+}
+else {
+    console.log("The person is an elder.");
+}
 //29 Favourite Fruit
-let Fruit = ['Apple', 'Banana', 'Pineapple', 'Orange'];
+let Fruit = ['Apple', 'Banana', 'Pineapple'];
 if (Fruit.includes('Apple')) {
     console.log('I Love apples');
 }
@@ -261,9 +289,15 @@ if (Fruit.includes('Mango')) {
 if (Fruit.includes('Orange')) {
     console.log('I love orange.');
 }
+if (Fruit.includes('Strawberry')) {
+    console.log('I love strawberries.');
+}
+if (Fruit.includes('Pear')) {
+    console.log('I love pears.');
+}
 //30 Hello admin Array
-let admin = ['Admin', 'Dan', 'Ali', 'Mo'];
-for (let user of admin) {
+let username = ['Admin', 'Dan', 'Ali', 'Mo'];
+for (let user of username) {
     if (user === 'Admin') {
         console.log('Hello, Admin, would you like to see your reports?');
     }
@@ -271,6 +305,55 @@ for (let user of admin) {
         console.log('Hello, User!');
     }
 }
-//31
-//32
+//31 No Users: Add an if test to make sure the list of users is not empty.
+let user = [];
+if (user.length === 0) {
+    console.log('We need to find some users!');
+}
+else {
+    console.log(`There are ${user.length} users on this platform.`);
+}
+//32 Checking Usernames
 //33
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let number of numbers) {
+    let ordinalEnding;
+    if (number === 1) {
+        ordinalEnding = "st";
+    }
+    else if (number === 2) {
+        ordinalEnding = "nd";
+    }
+    else if (number === 3) {
+        ordinalEnding = "rd";
+    }
+    else {
+        ordinalEnding = "th";
+    }
+    console.log(`${number}${ordinalEnding}`);
+}
+//34
+let pizzas = ['Pepperoni', 'Tikka', 'Cheese'];
+for (let pizza of pizzas) {
+    console.log(`I really love ${pizza} flavoured pizza`);
+}
+console.log('i really like pizzas,they are tasty crunchy and kinda juicy sometimes. California Pizza, Broadway and PizzaSpice kinda have the best pizzas. I love Pizzas!!');
+//35
+let animals = ["Dog", "Cat", "Rabbit"];
+for (let animal of animals) {
+    console.log(`A ${animal.toLowerCase()} would make a great pet.`);
+}
+console.log("Any of these animals would make a great pet!");
+//36
+function make_shirt(size, print) {
+    console.log(`The size of your shirt is ${size} cm and the text to be printed on is "${print}".`);
+}
+make_shirt(15, 'Metallica');
+make_shirt(16, 'Red Hot Chilli Peppers');
+//37
+function Large_Shirts(size = 'Large', message = 'I love TS') {
+    console.log(`Your shirt size is ${size} and your message to be printed on is ${message}.`);
+}
+Large_Shirts();
+Large_Shirts('medium');
+Large_Shirts('small', 'GunsNroses');
